@@ -1,10 +1,8 @@
-export interface Link {
-  small: string;
-  regular: string;
-}
-
 export interface Image {
   id: string;
-  urls: Link;
+    urls: {
+    small: string;
+    regular: string;
+  };
   slug: string;
 }

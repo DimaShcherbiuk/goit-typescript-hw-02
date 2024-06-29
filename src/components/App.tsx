@@ -12,7 +12,6 @@ import { Image } from "./types";
 
 interface Responce {
   results:[];
-  total: number;
 }
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
       try {
         setIsLoading(true);
         const resonse = await getPhotos<Responce>(query, page);
-        const { results, total } = resonse;
+        const { results } = resonse;
         if (results.length === 0) {
           setIsEmpty(true);
         } else {
@@ -44,7 +43,7 @@ function App() {
         } else {
           setImages((prevArticles) => [...prevArticles, ...results]);
         }
-        setIsVisible(total === 10);
+        setIsVisible(results.length > 0 && results.length % 10 === 0);
       } catch (error) {
         setError(true);
       } finally {

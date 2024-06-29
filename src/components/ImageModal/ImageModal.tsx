@@ -25,7 +25,6 @@ interface ImageModalProps {
   modalUrl: string;
 }
 
-
 const ImageModal = ({ modalIsOpen, closeModal, modalUrl }:ImageModalProps) => {
   return (
     <Modal
