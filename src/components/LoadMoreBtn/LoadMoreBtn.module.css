@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  background: rgb(146, 201, 155);
+  border-radius: 8px;
+  width: 125px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font: 500 14px / 1.5 "Montserrat", sans-serif;
+  color: rgba(0, 0, 0, 0.739);
+  margin: 40px auto;
+}
